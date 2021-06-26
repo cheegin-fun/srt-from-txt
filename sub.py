@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-import sys # using argv, exit
+from sys import argv, exit
 
 def main():
-    argc = len(sys.argv)
+    argc = len(argv)
 
     if argc < 1 or argc % 2 != 1: # This file counts as an argument too
         print('Use: <filename> input1 output1 input2 output2 etc.')
-        sys.exit(1)
+        exit(1)
 
     # Turn argv of [input1, output1, input2, output2, ...] into
     # [(input1, output1), (input2, output2), ...]
