@@ -11,7 +11,7 @@ def main():
 
     # Turn argv of [input1, output1, input2, output2, ...] into
     # [(input1, output1), (input2, output2), ...]
-    for arg in list(zip(*[iter(sys.argv[1:])] * 2)):
+    for arg in list(zip(*[iter(argv[1:])] * 2)):
         with open(arg[0], 'r') as inputFile:
             with open(arg[1], 'w') as outputFile:
                 convertToSub(inputFile, outputFile)
